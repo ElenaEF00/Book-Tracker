@@ -1,0 +1,44 @@
+@import "../../assets/css/variables.scss";
+
+.Book {
+  .backBtn {
+    border-radius: 100%;
+    border: none;
+    background-color: white;
+    margin-left: 5%;
+    margin-bottom: 10px;
+
+    .backIcon {
+      width: 2.2rem;
+      height: 2.2rem;
+      color: $fourth-color;
+      transition: transform 0.3s;
+
+      &:hover {
+        transform: scale(1.2);
+        color: $primary-color;
+      }
+    }
+  }
+
+  .singleBook {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .wrapper {
+      max-width: 80%;
+    }
+
+    .mainInfo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .info {
+        display: flex;
+      }
+    }
+  }
+}

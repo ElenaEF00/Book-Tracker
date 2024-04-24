@@ -1,0 +1,54 @@
+@import "../../assets/css/variables.scss";
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .title {
+    text-align: center;
+    color: $fourth-color;
+  }
+
+  .info {
+    width: 80%;
+    color: $third-color;
+  }
+}
+
+.container {
+  .title {
+    text-align: center;
+    color: $fourth-color;
+  }
+
+  .keypoints {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .point {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+    padding: 1rem;
+    background-color: $bg-color;
+    border-radius: 2rem;
+
+    .icon {
+      width: 50px;
+    }
+
+    .point__title {
+      color: $primary-color;
+    }
+
+    .point__info {
+      color: $third-color;
+    }
+  }
+}
