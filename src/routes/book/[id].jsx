@@ -49,6 +49,7 @@ export default function Book() {
                   </div>
                 </div>
                 <div className={styles.sentence}>
+                  <h6 className={styles.introTitle}>Firts sentence</h6>
                   <p>
                     <span className={styles.quote}>"</span>
                     {bookInfo?.first_sentence[0]}
