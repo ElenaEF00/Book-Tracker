@@ -34,15 +34,26 @@ export default function Book() {
                     src={`https://covers.openlibrary.org/b/id/${bookInfo.cover_i}-M.jpg`}
                     alt={bookInfo?.title}
                   />
+                  <h1 className={styles.title}>{bookInfo?.title}</h1>
+                  <h3 className={styles.author}>{bookInfo?.author_name}</h3>
                   <div className={styles.info}>
-                    <h1>{bookInfo?.title}</h1>
-                    <h3>{bookInfo?.author_name}</h3>
-                    <h3>Anno di pubblicazione:</h3>
+                    <p>
+                      ⭐{bookInfo?.ratings_average.toFixed(1)}{" "}
+                      <span className={styles.outOfFive}>/5</span>
+                    </p>
                     <p>{bookInfo?.first_publish_year}</p>
+                    <p>
+                      {bookInfo?.number_of_pages_median}{" "}
+                      <span className={styles.pages}>pages</span>
+                    </p>
                   </div>
                 </div>
-                <span>{bookInfo?.ratings_average}⭐</span>
-                <p>"{bookInfo?.first_sentence[0]}"</p>
+                <div className={styles.sentence}>
+                  <p>
+                    <span className={styles.quote}>"</span>
+                    {bookInfo?.first_sentence[0]}
+                  </p>
+                </div>
               </>
             )}
           </div>
