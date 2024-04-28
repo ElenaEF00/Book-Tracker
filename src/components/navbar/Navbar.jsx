@@ -1,4 +1,11 @@
 import styles from "./index.module.scss";
+import {
+  AiOutlineHome,
+  AiOutlineUser,
+  AiOutlineCopyright,
+  AiOutlineTwitter,
+  AiOutlineInstagram,
+} from "react-icons/ai";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -6,41 +13,31 @@ const Navbar = () => {
     <nav className={styles.Navbar}>
       <div className={styles.wrapper}>
         <ul className={styles.menu}>
-          <li>
+          <li className={styles.li}>
             <Link className={styles.links} to={"/"}>
-              Homepage
+              <AiOutlineHome className={styles.icon} />
             </Link>
           </li>
-          <li>
+          <li className={styles.li}>
+            <Link className={styles.links} to={"/User"}>
+              <AiOutlineUser className={styles.icon} />
+            </Link>
+          </li>
+          <li className={styles.li}>
             <Link className={styles.links} to={"/Copyright"}>
-              Copyright
+              <AiOutlineCopyright className={styles.icon} />
             </Link>
           </li>
         </ul>
         <div className={styles.logo}>
           <img src="https://img.logoipsum.com/330.svg" alt="logo" />
         </div>
-        <ul className={styles.icons}>
-          <li>
-            <img
-              className={styles.images}
-              src="https://img.icons8.com/ios/50/3A724F/user-male-circle--v1.png"
-              alt="account"
-            />
+        <ul className={styles.social}>
+          <li className={styles.li}>
+            <AiOutlineTwitter className={styles.images} />
           </li>
-          <li>
-            <img
-              className={styles.images}
-              src="https://img.icons8.com/ios/50/3A724F/twitter--v1.png"
-              alt="twitter"
-            />
-          </li>
-          <li>
-            <img
-              className={styles.images}
-              src="https://img.icons8.com/ios/50/3A724F/instagram-new--v1.png"
-              alt="instagram"
-            />
+          <li className={styles.li}>
+            <AiOutlineInstagram className={styles.images} />
           </li>
         </ul>
       </div>

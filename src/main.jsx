@@ -6,6 +6,7 @@ import Homepage from "./routes/homepage";
 import Book from "./routes/book/[id]";
 import Page404 from "./routes/page404";
 import Copyright from "./routes/copyright";
+import User from "./routes/user";
 import "./index.css";
 
 const router = createBrowserRouter([
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
   {
     path: "copyright",
     element: <Copyright />,
+  },
+  {
+    path: "user",
+    element: <User />,
   },
 ]);
 

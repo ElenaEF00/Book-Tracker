@@ -1,9 +1,10 @@
 @import "../../assets/css/variables.scss";
 
 .Book {
+  position: relative;
   display: flex;
   flex-direction: column;
-  width: auto;
+  width: 170px;
   height: 200px;
   padding: 12px;
   background-color: $bg-color;
@@ -15,7 +16,7 @@
 
   a {
     text-decoration: none;
-    width: 200px;
+    width: 170px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -47,6 +48,14 @@
       color: $third-color;
       transform: translate(-0px, -30px);
     }
+  }
+
+  .favoriteIcon {
+    position: absolute;
+    height: 20px;
+    top: 25px;
+    width: auto;
+    color: $primary-color;
   }
 
   &:hover {

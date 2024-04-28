@@ -26,9 +26,20 @@
       margin-inline-end: 0px;
       padding-inline-start: 0px;
 
-      .links {
-        text-decoration: none;
-        color: $primary-color;
+      .li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .links {
+          text-decoration: none;
+          color: $primary-color;
+
+          .icon {
+            width: 1.7rem;
+            height: auto;
+          }
+        }
       }
     }
   }
@@ -37,7 +48,7 @@
     margin: 0.5rem;
   }
 
-  .icons {
+  .social {
     display: none;
   }
 }
@@ -68,16 +79,23 @@
       margin: 0;
     }
 
-    .icons {
+    .social {
       list-style: none;
       display: flex;
       justify-content: center;
       align-items: center;
       gap: 2rem;
 
-      .images {
-        width: 1.7rem;
-        height: auto;
+      .li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .images {
+          width: 1.7rem;
+          height: auto;
+          color: $primary-color;
+        }
       }
     }
   }

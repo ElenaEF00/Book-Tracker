@@ -1,0 +1,60 @@
+@import "../../assets/css/variables.scss";
+
+.UserPage {
+  .user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+
+    h2 {
+      color: $third-color;
+      margin-bottom: 0;
+    }
+
+    .userIcon {
+      width: 100px;
+      height: auto;
+    }
+  }
+
+  .loadingContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: auto;
+    z-index: 99;
+  }
+
+  .favoriteBooks {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+
+    .noFavBooks {
+      width: 90%;
+      background-color: $bg-color;
+      border-radius: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      margin-top: 30px;
+
+      .text {
+        color: $third-color;
+        text-align: center;
+
+        .highlight {
+          color: $fourth-color;
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}

@@ -28,7 +28,6 @@ export default function Book() {
             {bookInfo?.isbn && (
               <>
                 <div className={styles.mainInfo}>
-                  {console.log(bookInfo)}
                   <img
                     className={styles.image}
                     src={`https://covers.openlibrary.org/b/id/${bookInfo.cover_i}-M.jpg`}
