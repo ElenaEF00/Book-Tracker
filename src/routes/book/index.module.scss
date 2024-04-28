@@ -1,5 +1,14 @@
 @import "../../assets/css/variables.scss";
 
+.loadingContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  height: 100px;
+  width: auto;
+}
+
 .Book {
   .backBtn {
     border-radius: 100%;
@@ -41,6 +50,7 @@
     }
 
     .mainInfo {
+      position: relative;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -58,6 +68,15 @@
 
       .author {
         margin-top: 10px;
+        color: $primary-color;
+      }
+
+      .favoriteIcon {
+        position: absolute;
+        height: 2rem;
+        top: 25px;
+        left: 25px;
+        width: auto;
         color: $primary-color;
       }
 
@@ -90,6 +109,16 @@
         margin-right: 5px;
         color: $primary-color;
       }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper {
+    max-width: 70%;
+
+    .mainInfo {
+      width: 80%;
     }
   }
 }

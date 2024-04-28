@@ -3,7 +3,6 @@ import styles from "./index.module.scss";
 import Navbar from "../../components/navbar";
 import Book from "../../components/book";
 import userAvatar from "../../public/undraw_female_avatar_efig.svg";
-import { DotLoader } from "react-spinners";
 
 export default function User() {
   const [userData, setUserData] = useState({
@@ -12,18 +11,12 @@ export default function User() {
     favoriteBooks: [],
   });
 
-  const [isLoading, setIsLoading] = useState(true);
-
   useEffect(() => {
     const storedUserData = JSON.parse(localStorage.getItem("userData"));
     if (storedUserData) {
       setUserData(storedUserData);
     }
   }, []);
-
-  useEffect(() => {
-    setIsLoading(false);
-  }, [userData]);
 
   useEffect(() => {
     localStorage.setItem("userData", JSON.stringify(userData));
@@ -49,31 +42,23 @@ export default function User() {
           <img className={styles.userIcon} src={userAvatar} alt="User Avatar" />
           <h2>{name}</h2>
         </div>
-        {isLoading ? (
-          <div className={styles.loadingContainer}>
-            <DotLoader color={"#c85d1b"} loading={isLoading} size={50} />
-          </div>
-        ) : (
-          <div className={styles.favoriteBooks}>
-            {favoriteBooks.length > 0 ? (
-              favoriteBooks.map((book) => (
-                <Book bookData={book} key={book.ia} />
-              ))
-            ) : (
-              <>
-                <div className={styles.noFavBooks}>
-                  <h4 className={styles.text}>
-                    Ancora nessun preferito?
-                    <br />
-                    <span className={styles.highlight}>
-                      Aggiungi un nuovo libro!
-                    </span>
-                  </h4>
-                </div>
-              </>
-            )}
-          </div>
-        )}
+        <div className={styles.favoriteBooks}>
+          {favoriteBooks.length > 0 ? (
+            favoriteBooks.map((book) => <Book bookData={book} key={book.ia} />)
+          ) : (
+            <>
+              <div className={styles.noFavBooks}>
+                <h4 className={styles.text}>
+                  Ancora nessun preferito?
+                  <br />
+                  <span className={styles.highlight}>
+                    Aggiungi un nuovo libro!
+                  </span>
+                </h4>
+              </div>
+            </>
+          )}
+        </div>
       </div>
     </>
   );
