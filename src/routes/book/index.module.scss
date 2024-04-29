@@ -34,7 +34,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 25px;
+    margin-top: 15px;
 
     .wrapper {
       width: 100%;
@@ -64,6 +64,7 @@
       .title {
         margin-bottom: 0;
         color: $fourth-color;
+        text-align: center;
       }
 
       .author {
@@ -75,7 +76,7 @@
         position: absolute;
         height: 2rem;
         top: 25px;
-        left: 25px;
+        left: 5px;
         width: auto;
         color: $primary-color;
       }
